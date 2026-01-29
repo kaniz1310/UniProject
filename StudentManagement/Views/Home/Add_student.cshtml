@@ -1,0 +1,16 @@
+﻿@{  
+ViewData["Title"] = "Add Student Page";
+}
+@model StudentManagement.Models.Student
+<div class="text-center">
+    <h1 class="display-4">Add Student</h1>
+</div>
+<form asp-controller="Home" asp-action="Add_studentForm">
+    <label>Id</label>
+    <input class="form-control" type="number" placeholder="0" asp-for="Id" />
+    <label>Name</label>
+    <input class="form-control " type="text" placeholder="0" asp-for="Name" step="0.1" />
+    <label>Age</label>
+    <input class="form-control" type="number" placeholder="Add a description" asp-for="Age" />
+    <button class="btn btn-primary mt-4" type="submit">Submit</button>
+</form>

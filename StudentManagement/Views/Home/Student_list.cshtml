@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "Student List Page";
+}
+@model List<StudentManagement.Models.Student>
+<div class="text-center">
+    <h1 class="display-4">Student List</h1>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                ID
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Age
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            foreach (Student s in Model)
+            {
+                <tr>
+                    <td>
+                        @s.Id
+                    </td>
+                    <td>
+                        @s.Name
+                    </td>
+                    <td>
+                        @s.Age
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+<a asp-controller="Home" asp-action="Index" class="btn btn-primary">Home</a>
+
